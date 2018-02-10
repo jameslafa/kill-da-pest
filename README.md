@@ -10,12 +10,12 @@ With the constraint of a 3 days projects, the idea became:
   1. Using **Tensor Flow** detect a bird on a picture taken from a Raspberry Pi and find it's location. _We used a bird because we already had a Tensor Flow trained model._
   2. Using **Computer Vision**, detect and locate a laser pointer which will be used to aim the bird. We used *OpenCV*.
   3. Using the **Raspberry Pi GPIOs**, move 2 servo motors to aim the laser at the bird
-  
+
 ### Implementation
- 
+
 #### Bird Detection
- 
-We used **Tensor Flow** and **Deep Learning** to locate the bird using the PiCamera. Compiling and installing Tensor Flow on a Raspberry Pi takes a lot of time so we decided at the end to run Tensor Flow on 
+
+We used **Tensor Flow** and **Deep Learning** to locate the bird using the PiCamera. Compiling and installing Tensor Flow on a Raspberry Pi takes a lot of time so we decided at the end to run Tensor Flow on
 's laptop. The communication between the Raspberry Pi and Filippo's laptop was done using a small HTTP server/client made in Python.
 
 The Raspberry Pi took a picture using the PiCamera, sent it to Filippo's laptop via HTTP POST and if a bird was found, the HTTP response would contain the coordinates of the bird on the picture.
@@ -50,7 +50,7 @@ To move the laser we assembled 2 servo motors on top of each other and attached 
 
 As explained above, we haven't been available to use the laser tracking with Computer Vision and moving the servo motors using PMW GPIOs at the same time. We would have had to build the laser commander with an Arduino but it wasn't possible in the remaining time.
 
-We decided to fall back on something less scientific but efficient but using calibration. 
+We decided to fall back on something less scientific but efficient but using calibration.
 
 We looked for the values we have to give each servo motor to go to each corner of the frame and then we move the servo motors proportionnally.
 
@@ -83,6 +83,5 @@ Well to summarize, it looks like crap but well with 3 days, shitty motors and ta
 ![Installation](https://github.com/jameslafa/kill-da-pest/blob/master/pics/pic_1.jpg)
 
 ![Laser](https://github.com/jameslafa/kill-da-pest/blob/master/pics/pic_2.jpg)
-  
-  
-  
+
+[![Watch the video](https://github.com/jameslafa/kill-da-pest/blob/master/pics/demo.png)](https://youtu.be/Dwx0p4QEHF4)
